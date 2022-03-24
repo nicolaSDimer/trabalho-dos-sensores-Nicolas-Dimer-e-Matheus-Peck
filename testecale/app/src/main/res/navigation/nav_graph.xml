@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.matheus.testecale.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/send_Data"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.matheus.testecale.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_fourFragment"
+            app:destination="@id/fourFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirFragment2"
+        android:name="com.matheus.testecale.ThirFragment"
+        android:label="fragment_thir"
+        tools:layout="@layout/fragment_thir" />
+    <fragment
+        android:id="@+id/fourFragment"
+        android:name="com.matheus.testecale.FourFragment"
+        android:label="fragment_four"
+        tools:layout="@layout/fragment_four" >
+        <action
+            android:id="@+id/action_fourFragment_to_fiveFragment"
+            app:destination="@id/fiveFragment" />
+        <action
+            android:id="@+id/action_fourFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_fourFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/fiveFragment"
+        android:name="com.matheus.testecale.FiveFragment"
+        android:label="fragment_five"
+        tools:layout="@layout/fragment_five" >
+        <action
+            android:id="@+id/action_fiveFragment_to_sixFragment"
+            app:destination="@id/sixFragment" />
+        <action
+            android:id="@+id/action_fiveFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_fiveFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/sixFragment"
+        android:name="com.matheus.testecale.sixFragment"
+        android:label="fragment_six"
+        tools:layout="@layout/fragment_six" >
+        <action
+            android:id="@+id/action_sixFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_sixFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.matheus.testecale.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+</navigation>
